@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="knockout-stage">
+    <div class="knockout-stage-pill">
+      <p class="knockout-stage-number">1</p>
+      <p class="knockout-stage-text">Knockout Stage</p>
+    </div>
+  </div>
+  <app-knockout-card
+    *ngFor="let teams of stageData.teams"
+    [countryName1]="teams.teama"
+    [countryName2]="teams.teamb"
+  >
+  </app-knockout-card>
+</div>

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+.ko-card {
+    background: rgb(127, 115, 179);
+    border-radius: 10px;
+    box-shadow: -4px 4px 15px 5px rgba(0,0,0,0.2);
+    display: inline-flex;
+    padding: 10px;
+    margin: 10px;
+
+    .country {
+        background: rgb(248, 248, 248);
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 0;
+        border-radius: 10px;
+        transition: all 200ms;
+        cursor: pointer;
+        
+        &:hover {
+            box-shadow: -5px 5px 9px -5px rgba(0,0,0,0.57);
+        }
+
+
+        .country-name {
+            margin: 0;
+        }
+    }
+}
+
+.vs {
+    font-family: 'Finger Paint', cursive;
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.winner{
+    border: 4px solid green;
+    box-shadow: -5px 5px 9px -5px rgba(0,250,0,0.57);
+
+}

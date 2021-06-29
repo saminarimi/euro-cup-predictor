@@ -1,0 +1,37 @@
+<div class="main">
+    <div class="group-stage">
+        <div class="group-stage-pill">
+            <p class="group-stage-number">1</p>
+            <p class="group-stage-text">Group Stage</p>
+        </div>
+    </div>
+    <div class="horizontal-bar horizontal-bar-top">
+        <img src="assets/goal.svg" alt="cheering">
+    </div>
+    <div class="prediction-card">
+        <h2 class="title">Predict the four best third-placed teams</h2>
+        <p class="sub-title">The four with the most points will progress to the knockout stage.</p>
+        <div class="country-divss">
+            <div class="country-card" 
+                *ngFor= "let country of countries"
+                (click)="setSelected(country.name)"
+                [ngClass]="{selected: selectedCountries.includes(country.name)}"
+            >
+                <img src={{country.url}} alt={{country.name}}>
+                <h3 class="country-name">{{country.name}}</h3>
+                <p class="group-name">Group {{country.group}}</p>
+                <!-- <input type="checkbox" (change)="setSelected({{country.name}})"> -->
+            </div>
+        </div>
+    </div>
+    <div class="horizontal-bar horizontal-bar-bottom">
+        <img src="assets/fans-cheering.svg" alt="cheering">
+    </div>
+    
+    <div class="container">
+        <button class ="continue-btn" [ngClass]="{disabled: (selectedCountries.length != 4) }">
+            CONTINUE
+        </button>
+    </div>
+    
+</div>

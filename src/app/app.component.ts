@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import country from './interfaces/country.interface';
+// import * as knockoutStageJson from ;
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'euro-cup-predictor';
+  c1 = 'portugal';
+  c2 = 'sweden';
 }

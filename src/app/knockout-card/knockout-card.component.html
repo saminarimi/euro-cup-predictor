@@ -1,0 +1,15 @@
+
+<div class="ko-card">
+    <div class="country c1 " [ngClass]="{winner: winner==='c1'}" (click)="setWinner('c1')" >
+        <img src={{country1.url}} alt="flag" class="flag">
+        <p class="country-name">{{country1.name}}</p>
+    </div>
+    <p class="vs">VS</p>
+    <div class="country c2" [ngClass]="{winner: winner==='c2'}" (click)="setWinner('c2')">
+        <img src={{country2.url}} alt="flag" class="flag">
+        <p class="country-name">{{country2.name}}</p>
+    </div>
+</div>
+
+
+<div class="country"></div>
