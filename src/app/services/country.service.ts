@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import country from '../interfaces/country.interface';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CountryService {
-  countries: { [key: string]: country }
+  countries: any;
 
   constructor() {
     this.countries = {
@@ -33,9 +32,9 @@ export class CountryService {
     }
   }
 
-  get = (key: string): country => {
+  get = (key: string): any => {
     const seletedCountry = this.countries[key];
     if (seletedCountry) return seletedCountry;
-    else return {name: key, url: '', group: ''};
+    else return { name: key, url: '', group: '' };
   }
 }

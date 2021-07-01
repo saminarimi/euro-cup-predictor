@@ -75,6 +75,8 @@ input[type="checkbox"] {
 .continue-btn {
   display: block;
   margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
   width: 250px;
   height: 40px;
   border-radius: 10px;
@@ -87,6 +89,7 @@ input[type="checkbox"] {
   background: linear-gradient(to right, #20002c, #cbb4d4);
   color: white;
   margin-bottom: 50px;
+  padding-top: 10px;
 
   &:hover {
     box-shadow: -8px 8px 10px 5px rgba(0, 0, 0, 0.055);
@@ -94,69 +97,68 @@ input[type="checkbox"] {
   }
 }
 
-
 .horizontal-bar {
-    width: 100%;
-    display: block;
-    background: rgba(214, 80, 80, 0.3);
-    height: 2px;
-    position: relative;
-    margin-top: 100px;
+  width: 100%;
+  display: block;
+  background: rgba(214, 80, 80, 0.3);
+  height: 2px;
+  position: relative;
+  margin-top: 100px;
 }
 
 .horizontal-bar img {
-    width: 150px;
-    position: absolute; 
+  width: 150px;
+  position: absolute;
 }
 
 .horizontal-bar-top img {
-    right: 30px;
-    top: -105px;  
+  right: 30px;
+  top: -105px;
 }
 
-.horizontal-bar-bottom img{
-    left: 30px;
-    top: -133px;  
+.horizontal-bar-bottom img {
+  left: 30px;
+  top: -133px;
 }
 
 .horizontal-bar-top {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .group-stage-pill {
-    width: 200px;
-    height: 50px;
-    border-radius: 50px;
-    background: white;
-    position: relative;
-    margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  background: white;
+  position: relative;
+  margin-top: 30px;
 }
 
 .group-stage-number {
-    background: rgb(71, 171, 230);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    position:relative;
-    top: 5px;
-    left: 5px;
-    font-size: 2rem;
-    color: white;
-    font-weight: bold;
-    padding: 0 14px;
-    display: inline-block;
+  background: rgb(71, 171, 230);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  padding: 0 14px;
+  display: inline-block;
 }
 
 .group-stage-text {
-    color: rgb(71, 171, 230);
-    display: inline-block;
-    padding: 0 20px;
-    position: relative;
-    top: -4px;
+  color: rgb(71, 171, 230);
+  display: inline-block;
+  padding: 0 20px;
+  position: relative;
+  top: -4px;
 }
-.selected{
-    border: 4px solid green;
-    box-shadow: -5px 5px 9px -5px rgba(0,250,0,0.57);
+.selected {
+  border: 4px solid green;
+  box-shadow: -5px 5px 9px -5px rgba(0, 250, 0, 0.57);
 }
 
 .country-divs {
@@ -165,7 +167,9 @@ input[type="checkbox"] {
   align-items: center;
 }
 
-.disabled{
+.disabled {
   background: whitesmoke;
   color: gray;
+  pointer-events: none;
+  cursor: pointer;
 }

@@ -1,5 +1,6 @@
+import { PredictionService } from './../services/prediction.service';
 import { Component, OnInit } from '@angular/core';
-import teams from '../interfaces/team.interface';
+
 
 declare var require: any;
 
@@ -11,13 +12,14 @@ declare var require: any;
 
 export class KnockoutStageComponent implements OnInit {
   // groups: any;
-  stageData: {user_id: string, teams: teams[] };
+  stageData: { user_id: string, teams: any[] };
 
-  constructor() {
+  constructor(public poredictionService: PredictionService) {
     this.stageData = require('../../assets/files/teams.json');
   }
 
   ngOnInit(): void {
-    
+    console.log('in knockout stage');
+    console.log(this.poredictionService.groupStageResult);
   }
 }

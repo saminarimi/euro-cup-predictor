@@ -6,6 +6,7 @@ import { KnockoutStageComponent } from './knockout-stage/knockout-stage.componen
 
 const routes: Routes = [
   { path: "group-stage", component: GroupStageComponent },
+  { path: "knockout-stage", component: KnockoutStageComponent },
   { path: "", component: KnockoutStageComponent }
 ];
 

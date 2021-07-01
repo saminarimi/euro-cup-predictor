@@ -1,5 +1,6 @@
+import { PredictionService } from './../services/prediction.service';
 import { Component, OnInit } from '@angular/core';
-import country from '../interfaces/country.interface';
+
 import { CountryService } from '../services/country.service';
 @Component({
   selector: 'app-group-stage',
@@ -7,12 +8,13 @@ import { CountryService } from '../services/country.service';
   styleUrls: ['./group-stage.component.scss']
 })
 export class GroupStageComponent implements OnInit {
-  countries: country[] = [];
+  countries: any[] = [];
   selectedCountries: string[] = [];
 
 
-  constructor(private countryService: CountryService) {
+  constructor(private countryService: CountryService, public predictionService: PredictionService) {
     this.countryService = countryService
+    this.predictionService = predictionService
   }
 
   ngOnInit(): void {
@@ -30,8 +32,8 @@ export class GroupStageComponent implements OnInit {
 
 
   setSelected(countryName: string) {
-    if (this.selectedCountries.includes(countryName)){
-      this.selectedCountries = this.selectedCountries.filter(function(c: string){
+    if (this.selectedCountries.includes(countryName)) {
+      this.selectedCountries = this.selectedCountries.filter(function (c: string) {
         return countryName !== c;
       })
     }
@@ -40,6 +42,7 @@ export class GroupStageComponent implements OnInit {
     } else {
       this.selectedCountries.push(countryName)
     }
+    this.predictionService.groupStageResult = this.selectedCountries;
   }
 }
 
